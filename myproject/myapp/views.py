@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
 #from myapp.forms import BookingForm
 
 # Create your views here.
+def about(request):
+  about_content = {'about': "Little Lemon"}
+  return render(request, "about.html", about_content)
+
+
 '''def form_view(request): 
   form = BookingForm() 
   context = {'form': form} 
