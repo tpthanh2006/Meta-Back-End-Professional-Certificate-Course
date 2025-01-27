@@ -4,6 +4,9 @@ from .models import Menu
 #from myapp.forms import BookingForm
 
 # Create your views here.
+def home(request):
+  return render(request, 'home.html')
+
 def menu(request):
   menu_items = Menu.objects.all()
   items_dict = {"menu": menu_items}
@@ -21,11 +24,6 @@ def about(request):
   form = BookingForm() 
   context = {'form': form} 
   return render(request, 'booking.html', context)
-
-
-def home(request):
-  response = HttpResponse("Welcome to Little Lemon!")
-  return response
 
 def about(request):
   return HttpResponse("About us")
