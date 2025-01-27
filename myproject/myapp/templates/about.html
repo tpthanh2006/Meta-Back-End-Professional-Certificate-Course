@@ -8,6 +8,8 @@
 </head>
 <body>
   <h2> About </h2>
-  <p> {{about}} <p>
+  {% for item in about %}
+  {{item.name}}
+  {% endfor %}
 </body>
 </html>
